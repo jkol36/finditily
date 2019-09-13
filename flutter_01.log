@@ -1,0 +1,112 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/jonkolman/development/flutter_login_demo/.packages' (OS Error: No such file or directory, errno = 2)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:643:7)
+#1      _File.openSync (dart:io/file_impl.dart:487:5)
+#2      _File.readAsBytesSync (dart:io/file_impl.dart:547:18)
+#3      ForwardingFile.readAsBytesSync (package:file/src/forwarding/forwarding_file.dart:95:62)
+#4      _parse (package:flutter_tools/src/dart/package_map.dart:13:50)
+#5      PackageMap.load (package:flutter_tools/src/dart/package_map.dart:37:14)
+#6      PackageMap.map (package:flutter_tools/src/dart/package_map.dart:41:5)
+#7      new PackageUriMapper (package:flutter_tools/src/compile.dart:166:84)
+#8      ResidentCompiler._recompile (package:flutter_tools/src/compile.dart:463:26)
+<asynchronous suspension>
+#9      _RecompileRequest._run (package:flutter_tools/src/compile.dart:349:16)
+<asynchronous suspension>
+#10     _CompilationRequest.run (package:flutter_tools/src/compile.dart:329:30)
+<asynchronous suspension>
+#11     ResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:508:23)
+<asynchronous suspension>
+#12     _rootRunUnary (dart:async/zone.dart:1132:38)
+#13     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#14     _CustomZone.runUnaryGuarded (dart:async/zone.dart:931:7)
+#15     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:336:11)
+#16     _DelayedData.perform (dart:async/stream_impl.dart:591:14)
+#17     _StreamImplEvents.handleNext (dart:async/stream_impl.dart:707:11)
+#18     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:667:7)
+#19     _rootRun (dart:async/zone.dart:1120:38)
+#20     _CustomZone.run (dart:async/zone.dart:1021:19)
+#21     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#22     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#23     _rootRun (dart:async/zone.dart:1124:13)
+#24     _CustomZone.run (dart:async/zone.dart:1021:19)
+#25     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#26     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#27     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#28     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#29     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#30     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable,
+    v1.9.1+hotfix.2, on Mac OS X
+    10.14.6 18G95, locale en-US)
+    [32m•[39m Flutter version 1.9.1+hotfix.2 at
+      /Users/jonkolman/downloads/flutte
+      r
+    [32m•[39m Framework revision 2d2a1ffec9 (5
+      days ago), 2019-09-06 18:39:49
+      -0700
+    [32m•[39m Engine revision b863200c37
+    [32m•[39m Dart version 2.5.0
+
+[32m[✓][39m Android toolchain - develop for
+    Android devices (Android SDK
+    version 29.0.2)
+    [32m•[39m Android SDK at
+      /Users/jonkolman/Library/Android/
+      sdk
+    [32m•[39m Android NDK location not
+      configured (optional; useful for
+      native profiling support)
+    [32m•[39m Platform android-29, build-tools
+      29.0.2
+    [32m•[39m Java binary at:
+      /Applications/Android
+      Studio.app/Contents/jre/jdk/Conte
+      nts/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime
+      Environment (build
+      1.8.0_202-release-1483-b49-558740
+      5)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Xcode - develop for iOS and macOS
+    (Xcode 10.3)
+    [32m•[39m Xcode at
+      /Applications/Xcode.app/Contents/
+      Developer
+    [32m•[39m Xcode 10.3, Build version 10G8
+    [32m•[39m CocoaPods version 1.7.5
+
+[32m[✓][39m Android Studio (version 3.5)
+    [32m•[39m Android Studio at
+      /Applications/Android
+      Studio.app/Contents
+    [32m•[39m Flutter plugin version 39.0.3
+    [32m•[39m Dart plugin version 191.8423
+    [32m•[39m Java version OpenJDK Runtime
+      Environment (build
+      1.8.0_202-release-1483-b49-558740
+      5)
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m iPhone X •
+      478C3F27-0E12-49EF-9A77-115F6958E
+      1A3 • ios •
+      com.apple.CoreSimulator.SimRuntim
+      e.iOS-12-4 (simulator)
+
+[32m•[39m No issues found!
+```
